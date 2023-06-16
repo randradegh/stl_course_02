@@ -14,12 +14,12 @@ st.subheader("Introducción")
 
 st.markdown(""" 
     En esta segunda sesión conocerán alguna funciones básica de Streamlit que generar un 
-    sitio web sencillo sin necesidad de usar CSS o HTML.
+    sitio web sencillo sin necesidad de usar CSS o HTML. *__!Pregunte por las restricciones!__*
 
     Revisaremos varios de los elementos comunes del lenguaje HTML, los cuales permiten 
     diseñar y dar funcionalidad a una página web.
 
-    Sin embargo, es posible que en algunos momentos podamos usar código de CSS y de HTML.
+    Sin embargo, es posible que en algunos momentos debamos usar código de CSS y de HTML.
 
     A continuación veremos como definir algunos de los elementos básicos de **HTML**.
 """)
@@ -55,7 +55,7 @@ st.markdown("### c. Texto (*text*)")
 st.write("Código")
 
 code = '''
-st.test("¡Hola. geeks!") 
+st.text("¡Hola. geeks!") 
 '''
 st.code(code, language='python')
 st.write("Resultado")
@@ -181,15 +181,17 @@ code = '''
 status = st.radio("Seleccione el género: ", ('Mujer', 'Hombre'))
  
 # Sentencia condicional a imprimir
-# Se muestra el resultado usando la función de éxito (succes)
+# Se muestra el resultado usando la función de éxito (success)
 if (status == 'Mujer'):
     st.success("Mujer")
 else:
     st.success("Hombre")
 '''
-st.write("Resultado")
 
 st.code(code, language='python')
+
+st.write("Resultado")
+
 # radio button
 # El primer argumento es el título del botón de opción. 
 # el segundo argumentos son las opciones del botón
@@ -218,7 +220,7 @@ hobby = st.selectbox("Pasatiempos: ",
 # Imprimimos el pasatiempo seleccionado
 st.write("Tu pasatiempo es: ", hobby)
 '''
-st.write("Resultado")
+
 
 st.code(code, language='python')
 # Selection box
@@ -227,10 +229,14 @@ st.code(code, language='python')
 # second argument takes options
 # El primer argumento es es título de la casilla
 # El segundo argumento contiene las opciones
+
+st.write("Resultado")
+
 hobby = st.selectbox("Pasatiempos: ",
     ['Baile', 'Lectura', 'Deportes'])
 
 # Imprimimos el pasatiempo seleccionado
+
 st.write("Tu pasatiempo es: ", hobby)
 
 # Separador
@@ -340,7 +346,7 @@ st.write("Resultado")
 # El primer argumento es es título del control
 # el segundo argumento define el inicio del control
 # el último define el rango superior
-level = st.slider("Seleccione el nivel", 1, 50)
+level = st.slider("Seleccione el nivel", 1, 5)
  
 # Imprimimos el nivel
 # se usa format() para el despliegue adecuado
@@ -351,4 +357,4 @@ st.text('Selección: {}'.format(level))
 ___
 """
 
-#footer("Copyrigth © 2022, RAF")
+#footer("Copyrigth © 2023, RAF")
